@@ -402,6 +402,8 @@ class Spiderling:
         if  any([extension.endswith(e) for e in extensions]):
             log.debug(f'{self.target}: {filename} matches extension filters')
             return True
+        elif not extension and self.parent.no_extension:
+            return True
         else:
             log.debug(f'{self.target}: Skipping file {filename}, does not match extension filters')
             return False

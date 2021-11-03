@@ -36,6 +36,8 @@ class MANSPIDER:
 
         self.no_download        = options.no_download
 
+        self.no_extension       = options.no_extension
+
         # applies "or" logic instead of "and"
         # e.g. file is downloaded if filename OR extension OR content match
         self.or_logic           = options.or_logic
